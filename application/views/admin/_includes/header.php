@@ -1,0 +1,80 @@
+ <header class="main-header">
+    <!-- Logo -->
+
+    <a href="<?php echo base_url('') ?>" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>PT GPU</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>PT Global Prima Utama</b></span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+        <?php
+$nama_hari = array(
+    'Sunday' => 'Minggu',
+    'Monday' => 'Senin',
+    'Tuesday' => 'Selasa',
+    'Wednesday' => 'Rabu',
+    'Thursday' => 'Kamis',
+    'Friday' => 'Jumat',
+    'Saturday' => 'Sabtu'
+);
+
+$hari = date('l', strtotime('+7 hours')); // Dapatkan nama hari saat ini
+$hari_indonesia = $nama_hari[$hari]; // Terjemahkan nama hari ke bahasa Indonesia
+
+?>
+<style>
+  .dropdown-menu {
+    padding: 0;
+}
+
+  </style>
+
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="<?php echo base_url('assetAdmin/dist/img/popr.jpg'); ?>" class="user-image" alt="User Image">
+              <span class="hidden-xs"><?php echo $this->session->userdata('nama'); ?></span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="<?php echo base_url('assetAdmin/dist/img/popr.jpg')?>" class="img-circle" alt="User sipo">
+
+                <p>
+                <?php echo $this->session->userdata('nama'); ?>
+                  <!-- <small>Admin sejak 2024</small> -->
+                  <small><?php echo $hari_indonesia . ", " . date("d/m/Y - H:i:s", strtotime("+7 hours")); // Waktu Indonesia Barat ?></small>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+
+    <div class="pull-right">
+        <!-- Tautan untuk keluar -->
+        <a href="<?php echo base_url('Auth/logout') ?>" class="btn btn-default btn-flat">
+            <i class="fa fa-sign-out"></i> Keluar
+        </a>
+    </div>
+</li>
+
+
+
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+        <!--  <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+  </header>
