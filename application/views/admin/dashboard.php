@@ -103,7 +103,7 @@
     <section class="content-header">
     
     <h2 class="header">
-        Sistem Inventaris Barang PT Global Prima Utama
+        Sistem Inventaris Barang
     </h2>
 		<h2>
 			Selamat Datang, 	
