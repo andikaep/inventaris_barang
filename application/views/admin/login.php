@@ -87,7 +87,7 @@
   <!-- Belum Punya Akun?  <a href="<?php echo base_url('Auth/add') ?>" class="text-center"><strong> <font color="black">Daftar Disini </font></strong></a>
    <br><br> -->
     
-    <p><center>Sistem Inventaris Barang <br> PT Global Prima Utama</center></p>
+    <p><center>Sistem Inventaris Barang</center></p>
   </div>
 </div>
 
